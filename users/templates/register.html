@@ -1,0 +1,13 @@
+{% block title %}Register{% endblock %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<form method="POST" class="form-group">
+    {% csrf_token %}
+    {{registerform | crispy}}
+    <button type="submit" class="btn btn-sucess">Register</button>
+</form>
+
+{% endblock %}

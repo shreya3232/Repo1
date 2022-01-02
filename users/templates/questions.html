@@ -1,0 +1,11 @@
+{% block title %}question{% endblock %}
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<form method="POST" class="form-group">
+    {% csrf_token %}
+    {{questionform}}
+    <button type="submit" class="btn btn-sucess">Ask Question</button>
+</form>
+{% endblock %}
